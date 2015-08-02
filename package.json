@@ -4,6 +4,7 @@
   "description": "First test of webpack with react",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --progress --colors --hot --inline --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +14,11 @@
   "author": "Sergei Winitzki",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.15.6",
+    "html-webpack-plugin": "^1.6.0",
     "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.5"
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1"
   }
 }
