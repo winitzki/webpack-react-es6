@@ -1,0 +1,19 @@
+{
+  "name": "try1",
+  "version": "0.0.1",
+  "description": "First test of webpack with react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://github.com/winitzki/sjs1"
+  },
+  "author": "Sergei Winitzki",
+  "license": "ISC",
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.5"
+  }
+}
