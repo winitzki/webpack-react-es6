@@ -4,7 +4,8 @@
   "description": "First test of webpack with react",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --hot --inline --history-api-fallback",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "start": "TARGET=dev webpack-dev-server --progress --colors --hot --inline --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,11 +15,48 @@
   "author": "Sergei Winitzki",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^4.0.5",
     "css-loader": "^0.15.6",
+    "eslint": "^1.0.0",
+    "eslint-loader": "^0.14.2",
+    "eslint-plugin-react": "^3.1.0",
     "html-webpack-plugin": "^1.6.0",
     "node-libs-browser": "^0.5.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.10.5",
-    "webpack-dev-server": "^1.10.1"
+    "webpack-dev-server": "^1.10.1",
+    "webpack-merge": "^0.1.2"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "new-cap": 0,
+      "strict": 0,
+      "no-underscore-dangle": 0,
+      "no-use-before-define": 0,
+      "eol-last": 0,
+      "quotes": [
+        2,
+        "single"
+      ],
+      "react/jsx-boolean-value": 1,
+      "react/jsx-quotes": 1,
+      "react/jsx-no-undef": 1,
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "react/no-did-mount-set-state": 1,
+      "react/no-did-update-set-state": 1,
+      "react/no-multi-comp": 1,
+      "react/no-unknown-property": 1,
+      "react/react-in-jsx-scope": 1,
+      "react/self-closing-comp": 1
+    }
   }
 }
